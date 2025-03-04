@@ -25,8 +25,6 @@ const createStructure = (routes: IRoute[], parentPath: string = '') => {
             fileDestPath = path.join(process.cwd(), 'src/app', parentPath, route.path, 'page.tsx');
         }
 
-        console.log(fileDestPath)
-
         // copy file
         fs.copyFileSync(filePath, fileDestPath);
 
